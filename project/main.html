@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        function setNewImage()
+        {
+            document.getElementById("workimg").src ="pages/photos/workstation.png";
+        }
+        function setNewbImage()
+        {
+            document.getElementById("workimg").src ="pages/photos/build-from-scratch.png";
+        }
+        function setNewgImage()
+        {
+            document.getElementById("workimg").src ="pages/photos/gaming-pc.png";
+        }
+    </script>    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+<style>
+    body{margin: 0%;padding: 0%;}
+    .page1 {background: url("pages/photos/bg-banner.jpg");color: white;}
+    .link {color: white;text-decoration: none;}
+    a:hover {color: #ba1001;}
+    .tittle {border-right: 3px solid #ba1001;font-size: 26px;font-weight: 700;padding-top: 20px;padding-right: 30px;padding-bottom:21px;}
+    .row1 {position: fixed;display: flex;flex-direction: row;background-color: black;z-index: 24;margin-top: -10px;text-transform: uppercase;width: 100%;}
+    li {width:110px;text-align: center;margin-bottom: -73px;padding-left: 20px;padding-right: 20px;padding-top: 25px;}
+    ul {display: flex;flex-direction: row;list-style: none;margin-top:auto;margin-bottom: auto;}
+    .login {background-color: black;border-left: 3px solid #ba1001;height: 30%;text-align: center;padding-top: 25px;padding-bottom: 27px;padding-left: 82px;padding-right: 82px;}
+    .border {border-bottom: 4px solid #ba1001;}
+    .dropdown {position: relative;display: inline-block;}
+    .dropdown:hover .dropdown-content {display: block;}
+    .dropdown-content a {color:white;padding: 12px 16px;text-decoration: none;display: block;}
+    .dropdown-content {display: none;position:absolute;background-color:#3a3a3a;min-width: 160px;z-index: 25;}
+    .dropdown-content a:hover {background-color: black;color: #ba1001;}
+    /* nav bar finish here */
+    .flex {display: flex;flex-direction: row;}
+    .leftsec {padding-top: 100px;padding-left: 100px;}
+    h2 {font-size:44px;font-weight: 700;line-height: 67px;margin-bottom: 0.5rem;}
+    .toppara {font-size: 20px;padding-bottom:15px;line-height: 30px;}
+    .img1 {margin-top: -500px;width:100%;transition: all .8s ease-in-out;}
+    .button {padding: 10PX;margin-left: 150PX;font-size: 18px;font-weight: 700;background-color: #ba1001;color: white;cursor: pointer;}
+    .button2 {background-color: black;text-transform: uppercase;border: none;}
+    span {color: #ba1001;}
+    .flip {width: 150px;height: 100px;perspective: 1000px;padding-left: 27.5px;padding-right: 27.5px;}
+    .card {animation:flipBox 5s 2s alternate-reverse infinite;transition:transform 0.8s;transform-style: preserve-3d;width: 150px;height: 150px;position: relative;}
+    .front {background-color: #ba1001;color: white;text-transform: uppercase;display:flex;position: absolute;width: 200px;height: 150px;backface-visibility: hidden;}
+    .back {text-transform: uppercase;background-size: cover;display: flex;overflow: hidden;transform: rotateX(180deg);position: absolute;backface-visibility: hidden;width: 200px;height: 200px;}
+    .flip:hover .card{transform: rotateX(180deg);}
+    .fronttext {text-align: center;padding-top: 45px;padding-left: 25px;font-size: 18px;font-weight: 700;}
+    .backtext {text-align: center;padding-top:70px;padding-left: 20px;font-size: 18px;font-weight: 700;}
+    /* front page complete */
+    .page2 {padding:20px;font-family: sans-serif;width:97%}
+    .tittle2 {font-weight: 700;font-size: 32px;text-align: center;padding-bottom: 10px;padding-top: 20px;}
+    .parra2 {text-align: center;padding-left: 3rem;padding-right: 3rem;font-size: 20px;margin-bottom: 30px;}
+    .row2 {display: flex;padding: 20px 0px;box-sizing: border-box;width: 100%;margin-left: -50px;}
+    .img2 {padding-left: 20px;padding-right: 20px;margin-left:30px;width:100%}
+    .absolute {min-height: 250px;position: relative;padding-left: 20px;padding-right: 20px;}
+    .txt {font-size: 24px;font-weight: 700;padding: 5px 0px;justify-content: center;position: absolute;z-index: 20;background-color: #001119c7;color: white;display: flex;margin-left:50px;margin-top: -90px;width: 450px;}
+    .prebutton {padding: 15px 25px;font-size: 16px;font-weight: 700;border: 2px solid black;width:fit-content;margin-left: 42.5%;cursor: pointer;}
+    .background {height: 95%;margin-top: -52.5%;background: linear-gradient(135deg, #00010f 0%, rgba(0, 1, 15, 0.94) 14%, rgba(0, 1, 15, 0.87) 28%, rgba(0, 1, 15, 0.81) 43%, rgba(0, 1, 15, 0.74) 58%, rgba(0, 1, 15, 0.67) 73%, rgba(0, 1, 15, 0.61) 87%, rgba(0, 1, 15, 0.55) 100%);clip-path: polygon(90% 24%, 67% 30%, 64% 51%, 41% 55%, 34% 77%, 11% 79%, 0 100%, 0 0, 100% 0%);}
+    .but2 {padding: 0.375rem;text-align: center;width: 200px;color: black;background-color: white;font-weight: 700;left: 40%;margin-top: -50px;position: absolute;border:1px solid blue;cursor: pointer;}
+    /* page 2 and 3 */
+    .footer {background-color:white;border-top: 1px solid #f1f1f1;}
+    .quicklink {margin-top: -10px;margin-left: 550px;}
+    .foothead {padding-left: 120px;padding-top: 80px;}
+    .info {margin-top: -190px;margin-left: 900px;}
+    .info2 {margin-top: 40px;float: right;margin-right: 200px;margin-top: -170px;}
+    .size {font-size: 30px;}
+    .underline {text-decoration:1px black underline;}
+    .fa .fa-facebook-official {font-size: 100px;}
+</style>
+</head>
+<body>
+<div class="page1">
+<div class="row1 border">
+<div class="tittle">Tech Vision</div>
+<div><ul>
+    <li style="margin-right: 40px;padding-left: 40px;"><a class="link" href="main.html">Home</a></li>
+    <li><a class="link" href="pages/pre-buildpc.html">Pre-Build PC</a></li>
+    <li><a class="link" href="main.html">Laptops</a></li>
+    <li style="width: 200px;padding-left:5px;"><a class="link" href="main.html">Browse Products</a></li>
+    <li style="margin-right:86px;"><div class="dropdown"><button class="link button2"><a>More</a></button>
+        <div class="dropdown-content">
+            <a  href="pages/demo.html">Demo</a>
+            <a  href="pages/Aboutus.html">About us</a>
+            <a  href="pages/feedback.html">Feedback</a>
+        </div>
+    </div></li>
+</ul></div>
+<div class="login"><a class="link" href="pages/login.html">Login / SignUP</a></div>
+</div>
+<div class="leftsec">
+    <h2>Experience the new prespective of<br>building <span>your new dream pc</span></h2>
+    <p class="toppara">Building your own PC is a rewarding experience. With our new approach, 
+        <br>
+        we'll help you to be sure that the compatibility of your selected PC parts is just right.</p>
+    <div class="flex">
+        <div class="flip">
+            <div class="card">
+                <div onmouseover="setNewImage()" class="front"><p class="fronttext">workstations</p></div>
+                <div class="back"><p class="backtext">BUSINESS DESKTOPS, WORKSTATIONS & SERVERS</p></div>
+            </div>
+        </div>
+        <div class="flip">
+            <div class="card">
+                <div onmouseover="setNewgImage()" class="front"><p class="fronttext" style="padding-left:40px;">Gaming PCS</p></div>
+                <div class="back"><p class="backtext">HIGH PERFORMANCE CUSTOM BUILD GAMING PCS</p></div>
+            </div>
+        </div>
+        <div class="flip">
+            <div class="card">
+                <div onmouseover="setNewbImage()" class="front"><p style="padding-top:45px;padding-left:10px" class="fronttext">Build it yourself</p></div>
+                <div class="back"><p class="backtext">Dream it! Build it!<br>Your Choice Your Build!</p></div>
+            </div>
+        </div>
+    </div>
+    <img id="workimg" class="img1" src="pages/photos/build-from-scratch.png">
+</div>
+</div>
+<div class="page2">
+    <div class="tittle2">Pre-Build PC</div>
+    <p class="parra2">Looking for the pre-builts PC? Here you can explore the pre-builts PCs under every segment and PCs, which are exclusively picked by our editorial team for the power-packed performance.</p>
+    <div class="row2">
+        <div class="absolute">
+            <div><img class="img2" src="pages/photos/pc-builds.jpg"></div>
+            <div class="txt"><p>Pre-Built  Gaming PC</p></div>
+        </div>
+        <div class="absolute">
+            <div><img class="img2" src="pages/photos/pc-builds.jpg"></div>
+            <div class="txt"><p>Pre-Built Affordable PC</p></div>
+        </div>
+        <div class="absolute">
+            <div><img class="img2" src="pages/photos/pc-builds.jpg"></div>
+            <div class="txt"><p>Pre-Built AIO PC</p></div>
+        </div>
+    </div>
+    <div class="prebutton"><a>Explore Pre-Built PCs</a></div>
+</div>
+<div class="page2">
+    <div class="tittle2">Best Laptops</div>
+    <p class="parra2">Looking for the best laptops? Laptops can be a daunting purchase, but luckily we've narrowed it down for you. In this section, you'll find only the best laptops that will help you acheive better performance and experience.</p>
+    <div class="row2">
+        <div class="absolute">
+            <div><img class="img2" src="pages/photos/laptop.jpg"></div>
+            <div class="txt background"><p>High-End Ganming Laptops</p></div>
+            <a class="but2">Explore Now</a>
+        </div>
+        <div class="absolute">
+            <div><img class="img2" src="pages/photos/laptop.jpg"></div>
+            <div class="txt background"><p>Affordable Laptops</p></div>
+            <a class="but2">Explore Now</a>
+        </div>
+        <div class="absolute">
+            <div><img class="img2" src="pages/photos/laptop.jpg"></div>
+            <div class="txt background"><p>Business Laptops</p></div>
+            <a class="but2">Explore Now</a>
+        </div>
+    </div>
+    <div style="margin-left:44.5%;" class="prebutton"><a>Explore Laptops</a></div>
+</div>
+<!-- <div class="footer">
+    <h2 class="foothead">Tech Vision</h2>
+    <i class="fa fa-facebook-official" style="font-size:25px;color:blue;padding-left:90px;margin-top:100px;"></i>
+    <i class="fa fa-instagram" style="font-size:25px"></i>
+    <i class="fa fa-whatsapp" style="font-size:24px;background-color: green;color: white;"></i>
+    <i class="fa fa-twitter" style="font-size:24px;background-color:blue;color: white;"></i>
+    <div class="quicklink">
+        <h3>Quick Links</h3>
+            <p class="underline"><span class="size">&#8227;</span>workstation</p>
+            <p class="underline"><span class="size">&#8227;</span>Gaming</p>
+            <p class="underline"><span class="size">&#8227;</span>Built-it-yorself</p>
+    </div>
+    <div class="info">
+        <h3>Info Links</h3>
+            <p class="underline"><span class="size">&#8227;</span>Contact Us</p>
+            <p class="underline"><span class="size">&#8227;</span>About Us</p>
+            <p class="underline"><span class="size">&#8227;</span>Support</p>
+    </div>
+    <div class="info2">
+            <p class="underline"><span class="size">&#8227;</span>Terms & Conditions</p>
+            <p class="underline"><span class="size">&#8227;</span>Privacy Policy</p>
+            <p class="underline"><span class="size">&#8227;</span>return & Refund policy </p>
+    </div>
+</div> -->
+</body>
+</html>

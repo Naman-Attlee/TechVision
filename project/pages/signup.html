@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<style>
+    body{margin: 0%;padding: 0%;}
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+        }
+    .button2 {background-color: black;font-size: 16px;text-transform: uppercase;margin-top: -2px;border:none;}
+    .dropdown {position: relative;display: inline-block;}
+    .dropdown:hover .dropdown-content {display: block;}
+    .dropdown-content a {color:white;padding: 12px 16px;text-decoration: none;display: block;}
+    .dropdown-content {display: none;position: absolute;background-color:#3a3a3a;min-width: 160px;z-index: 25;}
+    .dropdown-content a:hover {background-color: black;color: red;}
+    .link {color: white;text-decoration: none;}
+    a:hover {color: red;}
+    li {width:130px;text-align: center;margin-bottom: -73px;padding-left: 20px;padding-right: 20px;padding-top: 35px;}
+    ul {display: flex;flex-direction: row;list-style: none;margin-top:auto;margin-bottom: auto;}
+    .signup {border-left: 3px solid red;background-color: black;height: 20%;text-align: center;padding-top: 35px;padding-bottom: 35px;padding-left: 50px;padding-right: 45px;width:240px;}
+    .border {border-bottom: 4px solid red;}
+    .tittle {border-right: 3px solid red;font-size: 26px;font-weight: 700;padding-top: 30px;padding-bottom: 20px;padding-right: 0px;color: white;width:30%;}
+    .row1 {width: 100%;position: fixed;display: flex;flex-direction: row;background-color: black;z-index: 24;margin-top: -10px;}
+    .ekline {display: inline-block;width:200px;margin-top: 10px;}
+    .top {background-image: url("photos/inner-bg.jpg");padding: 150px;color: white;text-align: center;font-size: 38px;font-weight: 800;}
+    .centertxt {text-align: center;margin-top: 200px;}
+    .policy {letter-spacing: 0.2em;text-align: center;font-size: 14px;}
+    .msg {letter-spacing: 2px;text-align: center;display:inline-block;margin-top: 100px;margin-left: 590px;}
+    .login {color:red;margin-left: 2px;text-decoration: none;}
+    .heading {text-align: center;font-size: 20px;}
+    .btn {color:white;background-color: black;padding: 5px 40px;border-radius: 50px;;}
+    body {font-family:sans-serif;text-transform: uppercase; font-size: 16px;}
+</style>
+</head>
+<body>
+<div class="row1 border">
+    <div class="tittle">Tech Vision</div>
+    <div><ul>
+        <li style="margin-right: 20px;"><a class="link" href="../main.html">Home</a></li>
+        <li><a class="link" href="pre-buildpc.html">Pre-Build PC</a></li>
+        <li><a class="link" href="../main.html">Laptops</a></li>
+        <li style="width: 200px;padding-left:5px;"><a class="link" href="../main.html">Browse Products</a></li>
+        <li style="margin-right:30px;"><div class="dropdown"><button class="link button2"><a>More</a></button>
+            <div class="dropdown-content">
+                <a  href="demo.html">Demo</a>
+                <a  href="Aboutus.html">About us</a>
+                <a  href="feedback.html">Feedback</a>
+            </div>
+        </div></li>
+    </ul></div>
+    <div class="signup"><a class="link" href="signup.html">Login / SignUP</a></div>
+</div>
+<div class="top">Sign up</div>
+<div class="msg"><h1>SIGN UP</h1>Already have a Account?<a class="login" href="login.html">log in</a></div>
+<fieldset style="width: 450px;margin-left: 520px;margin-top:10px ">
+<form>
+<div class="ekline";>
+<p>First Name<br>
+<input type="text" name="fname" required></p></div>
+<div class="ekline"><p>Last Name<br>
+<input type="text" name="lname" required></p></div>
+<div><p style="margin-top:5px ;">Phone number<br>
+<input type="number" name="phone number" maxlength="10" required></p>
+<p>Email<br>
+<input type="email" name="email" required></p>
+<p>Password<br>
+<input type="password" name="password" minlength="8" required></p></div>
+<p style="text-align:center;"><input type="submit" value="SignUp" class="btn"></p>
+<p class="policy">By tapping Sign Up, you acknowledge that you have read
+    the Privacy Policy and agree to Terms & Conditions.</p>
+</form>
+</fieldset>
+</body>

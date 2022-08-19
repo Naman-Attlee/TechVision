@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<style>
+    body{margin: 0%;padding: 0%;}
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+        }
+    .button2 {background-color: black;font-size: 16px;text-transform: uppercase;margin-top: -2px;border: none;}
+    .dropdown {position: relative;display: inline-block;}
+    .dropdown:hover .dropdown-content {display: block;}
+    .dropdown-content a {color:white;padding: 12px 16px;text-decoration: none;display: block;}
+    .dropdown-content {display: none;position: absolute;background-color:#3a3a3a;min-width: 160px;z-index: 25;}
+    .dropdown-content a:hover {background-color: black;color: red;}
+    .emailpass {margin-left: 50px;}
+    .link {color: white;text-decoration: none;}
+    a:hover {color: red;}
+    li {width:130px;text-align: center;margin-bottom: -73px;padding-left: 20px;padding-right: 20px;padding-top: 35px;}
+    ul {display: flex;flex-direction: row;list-style: none;margin-top:auto;margin-bottom: auto;}
+    .signup {border-left: 3px solid red;background-color: black;height: 20%;text-align: center;padding-top: 35px;padding-bottom: 35px;padding-left: 50px;padding-right: 45px;width:197px;}
+    .border {border-bottom: 4px solid red;}
+    .tittle {border-right: 3px solid red;font-size: 26px;font-weight: 700;padding-top: 30px;padding-bottom: 20px;color: white;width:170px;padding-right: 40px;}
+    .row1 {width: 100%;position: fixed;display: flex;flex-direction: row;background-color: black;z-index: 24;margin-top: -10px;}
+    .ekline {display: inline-block;width:200px;margin-top: 10px;}
+    .top {background-image: url("photos/inner-bg.jpg");padding: 150px;color: white;text-align: center;font-size: 38px;font-weight: 800;}
+    .centertxt {text-align: center;margin-top: 200px;}
+    .policy {letter-spacing: 0.2em;text-align: center;font-size: 14px;margin-left: 500px;margin-right: 500px;}
+    .msg {letter-spacing: 2px;text-align: center;display:inline-block;justify-content: center;padding-left:55px;margin-bottom: 20px;line-height: 15px;}
+    .login {color:red;margin-left: 2px;text-decoration: none;}
+    .heading {text-align: center;font-size: 20px;}
+    .btn {color:white;background-color: red;padding: 4px 30px;font-size: 14px;font-weight: 600;border: none;line-height: 26px;margin-left: 25px;margin-right: 25px;}
+    body {font-family:sans-serif;text-transform: uppercase; font-size: 16px;}
+    .borderline {border-top: 1px solid #dedede;text-align: center;padding-top: 30px;color: red;margin-bottom: 45px;margin-left: 30px;margin-right: 30px;}
+</style>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script>
+   function validation(mail,pass){
+    var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    var passw=  /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,15}$/;
+    if(mail.value.match(mailformat) && pass.value.match(passw)){
+        swal("Login Successful!","", "success").then(function() {
+    window.location = "../main.html";
+}); 
+    }  
+    else{
+        swal("Oops...","Wrong Username or Password", "error").then(function() {
+            document.getElementById("form1").reset();
+});
+    }
+   };
+</script>
+
+</head>
+<body>
+<div class="row1 border">
+    <div class="tittle">Tech Vision</div>
+    <div><ul>
+        <li style="margin-right: 20px;"><a class="link" href="../main.html">Home</a></li>
+        <li><a class="link" href="pre-buildpc.html">Pre-Build PC</a></li>
+        <li><a class="link" href="../main.html">Laptops</a></li>
+        <li style="width: 200px;padding-left:5px;"><a class="link" href="../main.html">Browse Products</a></li>
+        <li style="margin-right:30px;"><div class="dropdown"><button class="link button2"><a>More</a></button>
+            <div class="dropdown-content">
+                <a  href="demo.html">Demo</a>
+                <a  href="Aboutus.html">About us</a>
+                <a  href="feedback.html">Feedback</a>
+            </div>
+        </div></li>
+    </ul></div>
+    <div class="signup"><a class="link" href="login.html">Login / SignUP</a></div>
+</div>
+<div class="top">Login</div>
+<fieldset style="width: 450px;margin-left: 520px;margin-top:100px;">
+<form id="form1" name="form1">
+<div class="msg"><h1>Sign in</h1>new to TechVision?<a class="login" href="signup.html">sign up</a></div>
+<div class="emailpass">
+<div class="input-control">
+<p>Email<br>
+<input id="email" style="width:80%;" type="text" name="email" required> 
+<div class="error"></div>
+</p>
+</div>
+<div class="input-control">
+<p>Password<br>
+<input style="width:80%;" id="password" type="text" name="password" minlength="8" required>
+<div class="error"></div>
+</p>
+</div>
+<input type="checkbox" name="remember password">Remember me
+</div>
+<p style="text-align:center;"><button style="width:80%;height: 30px;text-align: center;" type="button" class="btn" id="submit" onclick="validation(document.form1.email,document.form1.password)">LOGIN</button></p>
+<p class="borderline">Forgot your password?</p>
+</form>
+</fieldset>
+<p class="policy">By logging in, you agree to our Terms & Conditions and to receive Tech Vision emails &
+    updates and acknowledge that you read our Privacy Policy.</p>
+</body>
+</html>

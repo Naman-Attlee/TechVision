@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    body{margin: 0%;padding: 0%;}
+    .page1 {background: url("photos/bg-banner.jpg");color: white;}
+    .link {color: white;text-decoration: none;}
+    a:hover {color: red;}
+    .tittle {border-right: 3px solid red;font-size: 26px;font-weight: 700;padding-top: 20px;padding-right: 30px;padding-bottom:21px;color: white;}
+    .row1 {position: fixed;display: flex;flex-direction: row;background-color: black;z-index: 24;margin-top: -10px;text-transform: uppercase;width: 100%;}
+    li {width:110px;text-align: center;margin-bottom: -73px;padding-left: 20px;padding-right: 20px;padding-top: 25px;}
+    ul {display: flex;flex-direction: row;list-style: none;margin-top:auto;margin-bottom: auto;}
+    .login {background-color: black;border-left: 3px solid red;height: 30%;text-align: center;padding-top: 25px;padding-bottom: 27px;padding-left: 82px;padding-right: 82px;}
+    .border {border-bottom: 4px solid red;}
+    .dropdown {position: relative;display: inline-block;}
+    .dropdown:hover .dropdown-content {display: block;}
+    .dropdown-content a {color:white;padding: 12px 16px;text-decoration: none;display: block;}
+    .dropdown-content {display: none;position:absolute;background-color:#3a3a3a;min-width: 160px;z-index: 25;}
+    .dropdown-content a:hover {background-color: black;color: red;}
+    .button2 {background-color: black;text-transform: uppercase;border: none;}
+    /* nav ends here */
+    .container {padding-top: 100px;}
+    /* .row2 {} */
+    .headertext {font-size: 36px;font-weight: 800;text-transform: uppercase;line-height: 1.4;color: black;position: relative;width:1000px;text-align: center;padding-left: 250px;}
+    .fevicon {float: left;margin-right: 30px;clear: both;padding-top: 40px;padding-bottom: 60px;transition: transform 0.8s;}
+    h4 {font-size: 1.2rem; margin-bottom: 12px;font-weight: 800;line-height: 1.2rem;color: black;}
+    .featurebox {border: 1px solid #f1f1f1;border-radius: 0.25rem;position: relative;margin-left: 100px;padding: 2rem 3rem 2rem 3rem;font-size: 16px;margin-right: 20px;line-height: 1.6rem;width:500px;margin-top: 20px;}
+    .right1 {float: right;margin-top: -535px;margin-right: 100px;height:180px;}
+    .right2 {float: right;margin-right: 100px;margin-top: -270px;}
+    .featurebox:hover .fevicon {transform: rotate(360deg) translateZ(0);}
+    /* front page over */
+    .end {background-color: #f7f7f7;}
+    .contain {max-width: 100%;align-items: center;margin-left: 50px;}
+    .headtext {font-size: 45px;font-weight: 900;line-height: 62px;margin-bottom: 20px;text-transform: uppercase;padding-right: 50px;color: #1f1f1f;padding-top: 70px;}
+    .content {width: 650px;height: 450px;}
+    .img3 {float: right;margin-top: -425px;margin-right: 100px;}
+    .paratext {font-size: 18px;font-weight: 400;line-height: 30px;margin-bottom: 40px;}
+</style>
+</head>
+<body>
+<div class="row1 border">
+<div class="tittle">Tech Vision</div>
+<div><ul>
+    <li style="margin-right: 40px;padding-left: 40px;"><a class="link" href="../main.html">Home</a></li>
+    <li><a class="link" href="pre-buildpc.html">Pre-Build PC</a></li>
+    <li><a class="link" href="../main.html">Laptops</a></li>
+    <li style="width: 200px;padding-left:5px;"><a class="link" href="../main.html">Browse Products</a></li>
+    <li style="margin-right:86px;"><div class="dropdown"><button class="link button2"><a>More</a></button>
+        <div class="dropdown-content">
+            <a  href="demo.html">Demo</a>
+            <a  href="Aboutus.html">About us</a>
+            <a  href="feedback.html">Feedback</a>
+        </div>
+    </div></li>
+</ul></div>
+<div class="login"><a class="link" href="login.html">Login / SignUP</a></div>
+</div>
+<div>
+    <div class="container">
+        <div class="row2">
+            <div>
+                <h2 class="headertext">BUILT BY EXPERTS + LIFETIME SUPPORT</h2>
+            </div>
+            <div class="featurebox">
+                <div class="fevicon">
+                    <img style="width:70px;" src="photos/pc-design.svg" alt="Icon">
+                </div>
+                <div>
+                    <h4>CRAFTMANSHIP</h4>
+                    <p>Our assembly is handled by professionals that religiously follow the belief that a clean build is a good build. These individuals handle only one PC at a time. They make sure that each PC is a fine tuned machine.</p>
+                </div>
+            </div>
+            <div class="featurebox">
+                <div class="fevicon">
+                    <img style="width:70px;" src="photos/performance.svg" alt="Icon">
+                </div>
+                <div>
+                    <h4>TESTING</h4>
+                    <p> Our work is of precision and deliverance. Before we dispatch any product, we take it through its paces to make sure that we deliver what we have promised. We take the product through various benchmark tests to make sure that your PC will not cause any limitations or bottlenecks while you are using it.</p>
+                </div>
+            </div>
+            <div class="featurebox right1">
+                <div class="fevicon">
+                    <img style="width:70px;" src="photos/testing.svg" alt="Icon">
+                </div>
+                <div>
+                    <h4>PERFORMANCE</h4>
+                    <p>Each PC is a fine tuned computing machine. What we promise with each machine is performance. We guarantee that each machine will match your expectations.</p>               
+                    
+                </div>
+            </div>
+            <div class="featurebox right2">
+                <div class="fevicon">
+                    <img style="width:70px;" src="photos/support-headset.svg" alt="Icon">
+                </div>
+                <div>
+                    <h4>SUPPORT</h4>
+                    <p> As service providers, we seek to make sure that you have everything you need. We are here to make sure that you are never denied anything when it comes to your computing needs. This is why we are here to provide a one stop shop for all you need.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="end">
+    <div class="contain">
+        <div class="content">
+            <h4 class="headtext">DESIGNED TO BE UNIQUE</h4> 
+            <p class="paratext">Not everyone lives the same way. However we all have our differences in our way of life. Here at Ant-PC we have embraced the power of diversity and we work hard to encourage it. Which is why our custom solutions are designed to your specification. With billions of possible hardware combinations available to your disposal; we can build PCs that are specifically made to your criteria. We make sure that what you want can be a one of a kind solution. We can make sure that what we build for you is truly unique.</p>
+        </div>
+        <div class="img3">
+            <img src="photos/Lian-Li-O11-Dynamic-XL-ROG-Certify-White2.png" style="width:400px;">
+        </div>
+    </div>
+</div>
+</body>
+</html>
