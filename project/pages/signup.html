@@ -21,7 +21,7 @@
     ul {display: flex;flex-direction: row;list-style: none;margin-top:auto;margin-bottom: auto;}
     .signup {border-left: 3px solid red;background-color: black;height: 20%;text-align: center;padding-top: 35px;padding-bottom: 35px;padding-left: 50px;padding-right: 45px;width:240px;}
     .border {border-bottom: 4px solid red;}
-    .tittle {border-right: 3px solid red;font-size: 26px;font-weight: 700;padding-top: 30px;padding-bottom: 20px;padding-right: 0px;color: white;width:30%;}
+    .tittle {border-right: 3px solid red;font-size: 26px;font-weight: 700;padding-top: 30px;padding-bottom: 20px;color: white;width:20%;}
     .row1 {width: 100%;position: fixed;display: flex;flex-direction: row;background-color: black;z-index: 24;margin-top: -10px;}
     .ekline {display: inline-block;width:200px;margin-top: 10px;}
     .top {background-image: url("photos/inner-bg.jpg");padding: 150px;color: white;text-align: center;font-size: 38px;font-weight: 800;}
@@ -33,6 +33,37 @@
     .btn {color:white;background-color: black;padding: 5px 40px;border-radius: 50px;;}
     body {font-family:sans-serif;text-transform: uppercase; font-size: 16px;}
 </style>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script type="text/javascript">
+    function checkpass(){
+        var pass = document.getElementById("password").value;
+        var mail = document.getElementById("email").value;
+        var cpass = document.getElementById("confirmpassword").value;
+        var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        var passw=  /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,15}$/;
+        if(mail.match(mailformat) && pass.match(passw)){
+            if(pass == cpass){
+                swal("SIGN UP SUCCESSFULLY","Welcome to TechVision", "success").then(function() {
+                    window.location = "login.html";
+                });
+            }
+            else{
+                swal("Oops...","Password and Confirm Password do not match", "error").then(function() {
+                    document.getElementById("password").value="";
+                    document.getElementById("confirmpassword").value="";
+                });
+            }
+            
+        }
+        else{
+                swal("Oops...","Wrong Email or Password", "error")
+            }
+        
+    };
+
+
+</script>
 </head>
 <body>
 <div class="row1 border">
@@ -55,19 +86,21 @@
 <div class="top">Sign up</div>
 <div class="msg"><h1>SIGN UP</h1>Already have a Account?<a class="login" href="login.html">log in</a></div>
 <fieldset style="width: 450px;margin-left: 520px;margin-top:10px ">
-<form>
+<form name="form" id="form">
 <div class="ekline";>
 <p>First Name<br>
-<input type="text" name="fname" required></p></div>
+<input type="text" id="fname" name="fname"></p></div>
 <div class="ekline"><p>Last Name<br>
-<input type="text" name="lname" required></p></div>
-<div><p style="margin-top:5px ;">Phone number<br>
-<input type="number" name="phone number" maxlength="10" required></p>
-<p>Email<br>
-<input type="email" name="email" required></p>
-<p>Password<br>
-<input type="password" name="password" minlength="8" required></p></div>
-<p style="text-align:center;"><input type="submit" value="SignUp" class="btn"></p>
+<input type="text" id="lname" name="lname"></p></div>
+<div class="ekline"><p style="margin-top:5px ;">Phone number<br>
+<input type="number" name="phone number" maxlength="10"></p></div>
+<div class="ekline"><p>Email<br>
+<input type="email" name="email" id="email"></p></div>
+<div class="ekline"><p>Password<br>
+<input type="password" name="password" id="password"></p></div>
+<div class="ekline"><p>Confirm Password<br>
+<input type="password" name="confirmpassword" id="confirmpassword"></p></div>
+<p style="text-align:center;"><input style="width: 50px;" value="SignUp" class="btn" onclick="checkpass()"></p>
 <p class="policy">By tapping Sign Up, you acknowledge that you have read
     the Privacy Policy and agree to Terms & Conditions.</p>
 </form>
